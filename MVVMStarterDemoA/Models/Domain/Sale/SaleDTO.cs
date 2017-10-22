@@ -5,52 +5,25 @@ namespace MVVMStarterDemoA.Models.Domain.Sale
 {
     public class SaleDTO : DTOBase
     {
-        private int _carKey;
-        private int _customerKey;
-        private int _employeeKey;
+        public int CarKey { get; set; }
 
-        private DateTimeOffset _salesDate;
-        private int _finalPrice;
+        public int CustomerKey { get; set; }
 
-        public int CarKey
-        {
-            get { return _carKey; }
-            set { _carKey = value; }
-        }
+        public int EmployeeKey { get; set; }
 
-        public int CustomerKey
-        {
-            get { return _customerKey; }
-            set { _customerKey = value; }
-        }
+        public DateTimeOffset SalesDate { get; set; }
 
-        public int EmployeeKey
-        {
-            get { return _employeeKey; }
-            set { _employeeKey = value; }
-        }
-
-        public DateTimeOffset SalesDate
-        {
-            get { return _salesDate; }
-            set { _salesDate = value; }
-        }
-
-        public int FinalPrice
-        {
-            get { return _finalPrice; }
-            set { _finalPrice = value; }
-        }
+        public int FinalPrice { get; set; }
 
         public override void SetDefaultValues()
         {
             Key = NullKey;
-            _carKey = NullKey;
-            _customerKey = NullKey;
-            _employeeKey = NullKey;
+            CarKey = NullKey;
+            CustomerKey = NullKey;
+            EmployeeKey = NullKey;
 
-            _salesDate = DateTimeOffset.Now;
-            _finalPrice = 0;
+            SalesDate = DateTimeOffset.Now;
+            FinalPrice = 0;
         }
 
         public override void SetValuesFromObject(Object obj)
@@ -62,12 +35,12 @@ namespace MVVMStarterDemoA.Models.Domain.Sale
             }
 
             Key = saleObj.Key;
-            _carKey = saleObj.CarKey;
-            _customerKey = saleObj.CustomerKey;
-            _employeeKey = saleObj.EmployeeKey;
+            CarKey = saleObj.CarKey;
+            CustomerKey = saleObj.CustomerKey;
+            EmployeeKey = saleObj.EmployeeKey;
 
-            _salesDate = saleObj.SalesDate;
-            _finalPrice = saleObj.FinalPrice;
+            SalesDate = saleObj.SalesDate;
+            FinalPrice = saleObj.FinalPrice;
         }
     }
 }

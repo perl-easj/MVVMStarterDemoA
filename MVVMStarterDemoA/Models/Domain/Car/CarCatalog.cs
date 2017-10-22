@@ -1,6 +1,4 @@
-﻿using System;
-using DTO.Implementation;
-using DTO.Interfaces;
+﻿using DTO.Implementation;
 using ExtensionsModel.Implementation;
 
 namespace MVVMStarterDemoA.Models.Domain.Car
@@ -20,30 +18,9 @@ namespace MVVMStarterDemoA.Models.Domain.Car
             }
         }
 
-        private CarCatalog() : base(new DTOFactoryBase<Car, CarDTO>())
+        private CarCatalog() : base(new CarDTOFactory())
         {
         }
         #endregion
-
-        public override Car ConvertDTO(IDTO obj)
-        {
-            CarDTO dtoObj = (obj as CarDTO);
-            if (dtoObj == null)
-            {
-                throw new ArgumentException(nameof(ConvertDTO));
-            }
-
-            return new Car(
-                    dtoObj.Key,
-                    dtoObj.ImageKey,
-                    dtoObj.LicensePlate,
-                    dtoObj.Brand,
-                    dtoObj.Model,
-                    dtoObj.Year,
-                    dtoObj.EngineSizeCm3,
-                    dtoObj.HorsePower,
-                    dtoObj.Seats,
-                    dtoObj.Price);
-        }
     }
 }

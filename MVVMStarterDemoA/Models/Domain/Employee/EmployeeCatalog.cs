@@ -1,6 +1,4 @@
-﻿using System;
-using DTO.Implementation;
-using DTO.Interfaces;
+﻿using DTO.Implementation;
 using ExtensionsModel.Implementation;
 
 namespace MVVMStarterDemoA.Models.Domain.Employee
@@ -20,27 +18,9 @@ namespace MVVMStarterDemoA.Models.Domain.Employee
             }
         }
 
-        private EmployeeCatalog() : base(new DTOFactoryBase<Employee, EmployeeDTO>())
+        private EmployeeCatalog() : base(new EmployeeDTOFactory())
         {
         }
         #endregion
-
-        public override Employee ConvertDTO(IDTO obj)
-        {
-            EmployeeDTO dtoObj = (obj as EmployeeDTO);
-            if (dtoObj == null)
-            {
-                throw new ArgumentException(nameof(InsertDTO));
-            }
-
-            return new Employee(
-                    dtoObj.Key,
-                    dtoObj.ImageKey,
-                    dtoObj.FullName,
-                    dtoObj.Phone,
-                    dtoObj.Email,
-                    dtoObj.Title,
-                    dtoObj.EmployedDate);
-        }
     }
 }

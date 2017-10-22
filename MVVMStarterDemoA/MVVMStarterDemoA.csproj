@@ -96,6 +96,10 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Configuration\App\AppConfig.cs" />
+    <Compile Include="Models\Domain\Car\CarDTOFactory.cs" />
+    <Compile Include="Models\Domain\Customer\CustomerDTOFactory.cs" />
+    <Compile Include="Models\Domain\Employee\EmployeeDTOFactory.cs" />
+    <Compile Include="Models\Domain\Sale\SaleDTOFactory.cs" />
     <Compile Include="Views\App\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -312,9 +316,11 @@
     <Reference Include="ControlState">
       <HintPath>..\..\MVVMStarterLibrary\ControlState\bin\Debug\ControlState.dll</HintPath>
     </Reference>
-    <Reference Include="DTOImplementation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
-    <Reference Include="DTOInterfaces, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="DTOImplementation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\MVVMStarterLibrary\DTOImplementation\bin\Debug\DTOImplementation.dll</HintPath>
+    </Reference>
+    <Reference Include="DTOInterfaces">
       <HintPath>..\..\MVVMStarterLibrary\DTOInterfaces\bin\Debug\DTOInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="ExtensionsModel">

@@ -6,48 +6,17 @@ namespace MVVMStarterDemoA.Models.Domain.Employee
 {
     public class EmployeeDTO : DTOBase
     {
-        private string _fullName;
-        private string _phone;
-        private string _email;
-        private string _title;
-        private DateTimeOffset _employedDate;
-        private int _imageKey;
+        public string FullName { get; set; }
 
-        public string FullName
-        {
-            get { return _fullName; }
-            set { _fullName = value; }
-        }
+        public string Phone { get; set; }
 
-        public string Phone
-        {
-            get { return _phone; }
-            set { _phone = value; }
-        }
+        public string Email { get; set; }
 
-        public string Email
-        {
-            get { return _email; }
-            set { _email = value; }
-        }
+        public string Title { get; set; }
 
-        public string Title
-        {
-            get { return _title; }
-            set { _title = value; }
-        }
+        public DateTimeOffset EmployedDate { get; set; }
 
-        public DateTimeOffset EmployedDate
-        {
-            get { return _employedDate; }
-            set { _employedDate = value; }
-        }
-
-        public int ImageKey
-        {
-            get { return _imageKey; }
-            set { _imageKey = value; }
-        }
+        public int ImageKey { get; set; }
 
         public int CarsSold
         {
@@ -57,12 +26,12 @@ namespace MVVMStarterDemoA.Models.Domain.Employee
         public override void SetDefaultValues()
         {
             Key = NullKey;
-            _fullName = "(not set)";
-            _phone = "(not set)";
-            _email = "(not set)";
-            _title = "(not set)";
-            _employedDate = DateTimeOffset.Now;
-            _imageKey = NullKey;
+            FullName = "(not set)";
+            Phone = "(not set)";
+            Email = "(not set)";
+            Title = "(not set)";
+            EmployedDate = DateTimeOffset.Now;
+            ImageKey = NullKey;
         }
 
         public override void SetValuesFromObject(Object obj)
@@ -74,12 +43,12 @@ namespace MVVMStarterDemoA.Models.Domain.Employee
             }
 
             Key = employeeObj.Key;
-            _fullName = employeeObj.FullName;
-            _phone = employeeObj.Phone;
-            _email = employeeObj.Email;
-            _title = employeeObj.Title;
-            _employedDate = employeeObj.EmployedDate;
-            _imageKey = employeeObj.ImageKey;
+            FullName = employeeObj.FullName;
+            Phone = employeeObj.Phone;
+            Email = employeeObj.Email;
+            Title = employeeObj.Title;
+            EmployedDate = employeeObj.EmployedDate;
+            ImageKey = employeeObj.ImageKey;
         }
     }
 }

@@ -20,31 +20,15 @@ namespace MVVMStarterDemoA.Models.Domain.Sale
             }
         }
 
-        private SaleCatalog() : base(new DTOFactoryBase<Sale, SaleDTO>())
+        private SaleCatalog() : base(new SaleDTOFactory())
         {
         }
         #endregion
-
-        public override Sale ConvertDTO(IDTO obj)
-        {
-            SaleDTO dtoObj = (obj as SaleDTO);
-            if (dtoObj == null)
-            {
-                throw new ArgumentException(nameof(InsertDTO));
-            }
-
-            return new Sale(
-                    dtoObj.Key,
-                    dtoObj.CarKey,
-                    dtoObj.CustomerKey,
-                    dtoObj.EmployeeKey,
-                    dtoObj.SalesDate,
-                    dtoObj.FinalPrice);
-        }
         
         public int CarsSoldByEmployee(int employeeKey)
         {
-            return AllDTO.FindAll(obj => ConvertDTO(obj).EmployeeKey == employeeKey).Count;
+            SaleDTOFactory dtoFactory = new SaleDTOFactory();
+            return AllDTO.FindAll(obj => dtoFactory.CreateT(obj).EmployeeKey == employeeKey).Count;
         }
     }
 }

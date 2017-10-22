@@ -5,90 +5,39 @@ namespace MVVMStarterDemoA.Models.Domain.Customer
 {
     public class CustomerDTO : DTOBase
     {
-        private string _fullName;
-        private string _phone;
-        private string _email;
-        private string _address;
-        private int _zipCode;
-        private string _city;
-        private int _minPrice;
-        private int _maxPrice;
-        private bool _newsLetter;
-        private int _imageKey;
+        public string FullName { get; set; }
 
-        public string FullName
-        {
-            get { return _fullName; }
-            set { _fullName = value; }
-        }
+        public string Phone { get; set; }
 
-        public string Phone
-        {
-            get { return _phone; }
-            set { _phone = value; }
-        }
+        public string Email { get; set; }
 
-        public string Email
-        {
-            get { return _email; }
-            set { _email = value; }
-        }
+        public string Address { get; set; }
 
-        public string Address
-        {
-            get { return _address; }
-            set { _address = value; }
-        }
+        public int ZipCode { get; set; }
 
-        public int ZipCode
-        {
-            get { return _zipCode; }
-            set { _zipCode = value; }
-        }
+        public string City { get; set; }
 
-        public string City
-        {
-            get { return _city; }
-            set { _city = value; }
-        }
+        public int MinPrice { get; set; }
 
-        public int MinPrice
-        {
-            get { return _minPrice; }
-            set { _minPrice = value; }
-        }
+        public int MaxPrice { get; set; }
 
-        public int MaxPrice
-        {
-            get { return _maxPrice; }
-            set { _maxPrice = value; }
-        }
+        public bool NewsLetter { get; set; }
 
-        public bool NewsLetter
-        {
-            get { return _newsLetter; }
-            set { _newsLetter = value; }
-        }
-
-        public int ImageKey
-        {
-            get { return _imageKey; }
-            set { _imageKey = value; }
-        }
+        public int ImageKey { get; set; }
 
         public override void SetDefaultValues()
         {
             Key = NullKey;
-            _fullName = "(not set)";
-            _phone = "(not set)";
-            _email = "(not set)";
-            _address = "(not set)";
-            _zipCode = 0;
-            _city = "(not set)";
-            _minPrice = 0;
-            _maxPrice = 0;
-            _newsLetter = false;
-            _imageKey = NullKey;
+            FullName = "(not set)";
+            Phone = "(not set)";
+            Email = "(not set)";
+            Address = "(not set)";
+            ZipCode = 0;
+            City = "(not set)";
+            MinPrice = 0;
+            MaxPrice = 0;
+            NewsLetter = false;
+            ImageKey = NullKey;
         }
 
         public override void SetValuesFromObject(Object obj)
@@ -100,16 +49,16 @@ namespace MVVMStarterDemoA.Models.Domain.Customer
             }
 
             Key = customerObj.Key;
-            _fullName = customerObj.FullName;
-            _phone = customerObj.Phone;
-            _email = customerObj.Email;
-            _address = customerObj.Address;
-            _zipCode = customerObj.ZipCode;
-            _city = customerObj.City;
-            _minPrice = customerObj.MinPrice;
-            _maxPrice = customerObj.MaxPrice;
-            _newsLetter = customerObj.NewsLetter;
-            _imageKey = customerObj.ImageKey;
+            FullName = customerObj.FullName;
+            Phone = customerObj.Phone;
+            Email = customerObj.Email;
+            Address = customerObj.Address;
+            ZipCode = customerObj.ZipCode;
+            City = customerObj.City;
+            MinPrice = customerObj.MinPrice;
+            MaxPrice = customerObj.MaxPrice;
+            NewsLetter = customerObj.NewsLetter;
+            ImageKey = customerObj.ImageKey;
         }
     }
 }

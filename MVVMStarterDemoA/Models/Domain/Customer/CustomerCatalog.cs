@@ -1,6 +1,4 @@
-﻿using System;
-using DTO.Implementation;
-using DTO.Interfaces;
+﻿using DTO.Implementation;
 using ExtensionsModel.Implementation;
 
 namespace MVVMStarterDemoA.Models.Domain.Customer
@@ -20,31 +18,9 @@ namespace MVVMStarterDemoA.Models.Domain.Customer
             }
         }
 
-        private CustomerCatalog() : base(new DTOFactoryBase<Customer, CustomerDTO>())
+        private CustomerCatalog() : base(new CustomerDTOFactory())
         {
         }
         #endregion
-
-        public override Customer ConvertDTO(IDTO obj)
-        {
-            CustomerDTO dtoObj = (obj as CustomerDTO);
-            if (dtoObj == null)
-            {
-                throw new ArgumentException(nameof(InsertDTO));
-            }
-
-            return new Customer(
-                    dtoObj.Key,
-                    dtoObj.ImageKey,
-                    dtoObj.FullName,
-                    dtoObj.Phone,
-                    dtoObj.Email,
-                    dtoObj.Address,
-                    dtoObj.ZipCode,
-                    dtoObj.City,
-                    dtoObj.MinPrice,
-                    dtoObj.MaxPrice,
-                    dtoObj.NewsLetter);
-        }
     }
 }

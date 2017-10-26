@@ -1,15 +1,15 @@
-﻿using DTO.Interfaces;
+﻿using DataTransformation.Interfaces;
 using ExtensionsViewModel.Implementation;
 using InMemoryStorage.Implementation;
+using MVVMStarterDemoA.DataTransformations.Domain.Car;
+using MVVMStarterDemoA.DataTransformations.Domain.Customer;
+using MVVMStarterDemoA.DataTransformations.Domain.Employee;
+using MVVMStarterDemoA.DataTransformations.Domain.Sale;
 using MVVMStarterDemoA.Models.App;
-using MVVMStarterDemoA.Models.Domain.Car;
-using MVVMStarterDemoA.Models.Domain.Customer;
-using MVVMStarterDemoA.Models.Domain.Employee;
-using MVVMStarterDemoA.Models.Domain.Sale;
 
 namespace MVVMStarterDemoA.ViewModels.Domain.Sale
 {
-    public class ItemViewModel : ItemViewModelWithImage<SaleDTO>
+    public class ItemViewModel : ItemViewModelWithImage<SaleViewModel>
     {
         public string DescriptionCar
         {
@@ -41,22 +41,22 @@ namespace MVVMStarterDemoA.ViewModels.Domain.Sale
             get { return GetCar() != null ? GetCar().ImageKey : StorableBase.NullKey; }
         }
 
-        private CarDTO GetCar()
+        private CarViewModel GetCar()
         {
-            return ObjectProvider.CarCatalog.ReadDTO(TypedDataObject.CarKey) as CarDTO;
+            return ObjectProvider.CarCatalog.ReadTransformed(TypedDataObject.CarKey) as CarViewModel;
         }
 
-        private CustomerDTO GetCustomer()
+        private CustomerViewModel GetCustomer()
         {
-            return ObjectProvider.CustomerCatalog.ReadDTO(TypedDataObject.CustomerKey) as CustomerDTO;
+            return ObjectProvider.CustomerCatalog.ReadTransformed(TypedDataObject.CustomerKey) as CustomerViewModel;
         }
 
-        private EmployeeDTO GetEmployee()
+        private EmployeeViewModel GetEmployee()
         {
-            return ObjectProvider.EmployeeCatalog.ReadDTO(TypedDataObject.EmployeeKey) as EmployeeDTO;
+            return ObjectProvider.EmployeeCatalog.ReadTransformed(TypedDataObject.EmployeeKey) as EmployeeViewModel;
         }
 
-        public ItemViewModel(IDTO obj) : base(obj)
+        public ItemViewModel(ITransformedData obj) : base(obj)
         {
         }
     }

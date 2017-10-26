@@ -1,5 +1,5 @@
-﻿using DTO.Implementation;
-using ExtensionsModel.Implementation;
+﻿using ExtensionsModel.Implementation;
+using MVVMStarterDemoA.DataTransformations.Domain.Customer;
 
 namespace MVVMStarterDemoA.Models.Domain.Customer
 {
@@ -18,7 +18,7 @@ namespace MVVMStarterDemoA.Models.Domain.Customer
             }
         }
 
-        private CustomerCatalog() : base(new CustomerDTOFactory())
+        private CustomerCatalog() : base(new CustomerViewModelFactory())
         {
         }
         #endregion

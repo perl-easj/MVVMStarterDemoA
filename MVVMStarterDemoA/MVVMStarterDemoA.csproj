@@ -96,10 +96,14 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Configuration\App\AppConfig.cs" />
-    <Compile Include="Models\Domain\Car\CarDTOFactory.cs" />
-    <Compile Include="Models\Domain\Customer\CustomerDTOFactory.cs" />
-    <Compile Include="Models\Domain\Employee\EmployeeDTOFactory.cs" />
-    <Compile Include="Models\Domain\Sale\SaleDTOFactory.cs" />
+    <Compile Include="DataTransformations\Domain\Car\CarViewModel.cs" />
+    <Compile Include="DataTransformations\Domain\Car\CarViewModelFactory.cs" />
+    <Compile Include="DataTransformations\Domain\Customer\CustomerViewModel.cs" />
+    <Compile Include="DataTransformations\Domain\Customer\CustomerViewModelFactory.cs" />
+    <Compile Include="DataTransformations\Domain\Employee\EmployeeViewModel.cs" />
+    <Compile Include="DataTransformations\Domain\Employee\EmployeeViewModelFactory.cs" />
+    <Compile Include="DataTransformations\Domain\Sale\SaleViewModel.cs" />
+    <Compile Include="DataTransformations\Domain\Sale\SaleViewModelFactory.cs" />
     <Compile Include="Views\App\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -107,16 +111,12 @@
     <Compile Include="Models\Base\PersonBase.cs" />
     <Compile Include="Models\Domain\Car\Car.cs" />
     <Compile Include="Models\Domain\Car\CarCatalog.cs" />
-    <Compile Include="Models\Domain\Car\CarDTO.cs" />
     <Compile Include="Models\Domain\Customer\CustomerCatalog.cs" />
     <Compile Include="Models\Domain\Customer\Customer.cs" />
-    <Compile Include="Models\Domain\Customer\CustomerDTO.cs" />
     <Compile Include="Models\Domain\Employee\EmployeeCatalog.cs" />
     <Compile Include="Models\Domain\Employee\Employee.cs" />
-    <Compile Include="Models\Domain\Employee\EmployeeDTO.cs" />
     <Compile Include="Models\Domain\Sale\SaleCatalog.cs" />
     <Compile Include="Models\Domain\Sale\Sale.cs" />
-    <Compile Include="Models\Domain\Sale\SaleDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\App\AppViewModel.cs" />
     <Compile Include="ViewModels\Domain\Car\DetailsViewModel.cs" />
@@ -301,11 +301,7 @@
       <Version>10.0.3</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\Domain\Template\" />
-    <Folder Include="ViewModels\Domain\Template\" />
-    <Folder Include="Views\Domain\Template\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Reference Include="CommandImplementation">
       <HintPath>..\..\MVVMStarterLibrary\ExtensionsServices\bin\Debug\CommandImplementation.dll</HintPath>
@@ -316,12 +312,11 @@
     <Reference Include="ControlState">
       <HintPath>..\..\MVVMStarterLibrary\ControlState\bin\Debug\ControlState.dll</HintPath>
     </Reference>
-    <Reference Include="DTOImplementation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\MVVMStarterLibrary\DTOImplementation\bin\Debug\DTOImplementation.dll</HintPath>
+    <Reference Include="DataTransformationImplementation">
+      <HintPath>..\..\MVVMStarterLibrary\DataTransformationImplementation\bin\Debug\DataTransformationImplementation.dll</HintPath>
     </Reference>
-    <Reference Include="DTOInterfaces">
-      <HintPath>..\..\MVVMStarterLibrary\DTOInterfaces\bin\Debug\DTOInterfaces.dll</HintPath>
+    <Reference Include="DataTransformationInterfaces">
+      <HintPath>..\..\MVVMStarterLibrary\DataTransformationInterfaces\bin\Debug\DataTransformationInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="ExtensionsModel">
       <HintPath>..\..\MVVMStarterLibrary\ExtensionsModel\bin\Debug\ExtensionsModel.dll</HintPath>

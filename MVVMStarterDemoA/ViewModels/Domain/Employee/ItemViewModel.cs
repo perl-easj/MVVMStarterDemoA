@@ -1,10 +1,10 @@
-﻿using DTO.Interfaces;
+﻿using DataTransformation.Interfaces;
 using ExtensionsViewModel.Implementation;
-using MVVMStarterDemoA.Models.Domain.Employee;
+using MVVMStarterDemoA.DataTransformations.Domain.Employee;
 
 namespace MVVMStarterDemoA.ViewModels.Domain.Employee
 {
-    public class ItemViewModel : ItemViewModelWithImage<EmployeeDTO>
+    public class ItemViewModel : ItemViewModelWithImage<EmployeeViewModel>
     {
         public override int ImageKey
         {
@@ -16,7 +16,7 @@ namespace MVVMStarterDemoA.ViewModels.Domain.Employee
             get { return TypedDataObject.FullName; }
         }
 
-        public ItemViewModel(IDTO obj) : base(obj)
+        public ItemViewModel(ITransformedData obj) : base(obj)
         {
         }
     }

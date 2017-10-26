@@ -1,5 +1,5 @@
-﻿using DTO.Implementation;
-using ExtensionsModel.Implementation;
+﻿using ExtensionsModel.Implementation;
+using MVVMStarterDemoA.DataTransformations.Domain.Employee;
 
 namespace MVVMStarterDemoA.Models.Domain.Employee
 {
@@ -18,7 +18,7 @@ namespace MVVMStarterDemoA.Models.Domain.Employee
             }
         }
 
-        private EmployeeCatalog() : base(new EmployeeDTOFactory())
+        private EmployeeCatalog() : base(new EmployeeViewModelFactory())
         {
         }
         #endregion

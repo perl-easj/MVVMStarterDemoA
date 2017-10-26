@@ -1,9 +1,9 @@
 ﻿using System;
-using DTO.Implementation;
+using DataTransformation.Implementation;
 
-namespace MVVMStarterDemoA.Models.Domain.Customer
+namespace MVVMStarterDemoA.DataTransformations.Domain.Customer
 {
-    public class CustomerDTO : DTOBase
+    public class CustomerViewModel : TransformedDataBase
     {
         public string FullName { get; set; }
 
@@ -42,7 +42,7 @@ namespace MVVMStarterDemoA.Models.Domain.Customer
 
         public override void SetValuesFromObject(Object obj)
         {
-            Customer customerObj = (obj as Customer);
+            Models.Domain.Customer.Customer customerObj = (obj as Models.Domain.Customer.Customer);
             if (customerObj == null)
             {
                 throw new ArgumentException(nameof(SetValuesFromObject));

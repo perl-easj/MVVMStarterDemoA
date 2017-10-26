@@ -1,7 +1,5 @@
-﻿using System;
-using DTO.Implementation;
-using DTO.Interfaces;
-using ExtensionsModel.Implementation;
+﻿using ExtensionsModel.Implementation;
+using MVVMStarterDemoA.DataTransformations.Domain.Sale;
 
 namespace MVVMStarterDemoA.Models.Domain.Sale
 {
@@ -20,15 +18,14 @@ namespace MVVMStarterDemoA.Models.Domain.Sale
             }
         }
 
-        private SaleCatalog() : base(new SaleDTOFactory())
+        private SaleCatalog() : base(new SaleViewModelFactory())
         {
         }
         #endregion
         
         public int CarsSoldByEmployee(int employeeKey)
         {
-            SaleDTOFactory dtoFactory = new SaleDTOFactory();
-            return AllDTO.FindAll(obj => dtoFactory.CreateT(obj).EmployeeKey == employeeKey).Count;
+            return All.FindAll(obj => obj.EmployeeKey == employeeKey).Count;
         }
     }
 }

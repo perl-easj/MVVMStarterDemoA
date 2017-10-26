@@ -1,5 +1,5 @@
-﻿using DTO.Implementation;
-using ExtensionsModel.Implementation;
+﻿using ExtensionsModel.Implementation;
+using MVVMStarterDemoA.DataTransformations.Domain.Car;
 
 namespace MVVMStarterDemoA.Models.Domain.Car
 {
@@ -18,7 +18,7 @@ namespace MVVMStarterDemoA.Models.Domain.Car
             }
         }
 
-        private CarCatalog() : base(new CarDTOFactory())
+        private CarCatalog() : base(new CarViewModelFactory())
         {
         }
         #endregion

@@ -1,11 +1,11 @@
 ﻿using System;
-using DTO.Interfaces;
+using DataTransformation.Interfaces;
 using ExtensionsViewModel.Implementation;
-using MVVMStarterDemoA.Models.Domain.Employee;
+using MVVMStarterDemoA.DataTransformations.Domain.Employee;
 
 namespace MVVMStarterDemoA.ViewModels.Domain.Employee
 {
-    public class DetailsViewModel : DetailsViewModelWithSelectableImage<EmployeeDTO>
+    public class DetailsViewModel : DetailsViewModelWithSelectableImage<EmployeeViewModel>
     {
         public string Name
         {
@@ -72,7 +72,7 @@ namespace MVVMStarterDemoA.ViewModels.Domain.Employee
             }
         }
 
-        public DetailsViewModel(IDTO obj) : base(obj, "Employee")
+        public DetailsViewModel(ITransformedData obj) : base(obj, "Employee")
         {
         }
     }

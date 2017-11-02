@@ -1,9 +1,9 @@
-﻿using ExtensionsModel.Implementation;
-using MVVMStarterDemoA.DataTransformations.Domain.Customer;
+﻿using MVVMStarterDemoA.DataTransformations.Domain.Customer;
+using MVVMStarterDemoA.Models.Base;
 
 namespace MVVMStarterDemoA.Models.Domain.Customer
 {
-    public class CustomerCatalog : FilePersistableCatalog<Customer>
+    public class CustomerCatalog : FilePersistableCatalogNoDTO<Customer, CustomerViewModel>
     {
         #region Model Singleton implementation
         private static CustomerCatalog _instance;

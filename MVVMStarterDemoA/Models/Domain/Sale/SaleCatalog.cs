@@ -1,9 +1,9 @@
-﻿using ExtensionsModel.Implementation;
-using MVVMStarterDemoA.DataTransformations.Domain.Sale;
+﻿using MVVMStarterDemoA.DataTransformations.Domain.Sale;
+using MVVMStarterDemoA.Models.Base;
 
 namespace MVVMStarterDemoA.Models.Domain.Sale
 {
-    public class SaleCatalog : FilePersistableCatalog<Sale>
+    public class SaleCatalog : FilePersistableCatalogNoDTO<Sale, SaleViewModel>
     {
         #region Model Singleton implementation
         private static SaleCatalog _instance;

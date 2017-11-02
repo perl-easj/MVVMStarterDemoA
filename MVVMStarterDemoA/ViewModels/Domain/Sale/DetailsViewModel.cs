@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.ObjectModel;
-using DataTransformation.Interfaces;
 using MVVMStarterDemoA.DataTransformations.Domain.Sale;
 using MVVMStarterDemoA.Models.App;
 using ViewModel.Implementation;
@@ -15,10 +14,10 @@ namespace MVVMStarterDemoA.ViewModels.Domain.Sale
 
         public DateTimeOffset Date
         {
-            get { return TypedDataObject.SalesDate; }
+            get { return DataObject.SalesDate; }
             set
             {
-                TypedDataObject.SalesDate = value;
+                DataObject.SalesDate = value;
                 OnPropertyChanged();
             }
         }
@@ -30,10 +29,10 @@ namespace MVVMStarterDemoA.ViewModels.Domain.Sale
 
         public int Price
         {
-            get { return TypedDataObject.FinalPrice; }
+            get { return DataObject.FinalPrice; }
             set
             {
-                TypedDataObject.FinalPrice = value;
+                DataObject.FinalPrice = value;
                 OnPropertyChanged();
                 OnPropertyChanged(nameof(Header));
             }
@@ -56,12 +55,12 @@ namespace MVVMStarterDemoA.ViewModels.Domain.Sale
 
         public Car.ItemViewModel SelectedCar
         {
-            get { return GetCarItemViewModel(TypedDataObject.CarKey); }
+            get { return GetCarItemViewModel(DataObject.CarKey); }
             set
             {
                 if (value != null)
                 {
-                    TypedDataObject.CarKey = value.TypedDataObject.Key;
+                    DataObject.CarKey = value.DataObject.Key;
                 }
                 OnPropertyChanged();
             }
@@ -69,12 +68,12 @@ namespace MVVMStarterDemoA.ViewModels.Domain.Sale
 
         public Customer.ItemViewModel SelectedCustomer
         {
-            get { return GetCustomerItemViewModel(TypedDataObject.CustomerKey); }
+            get { return GetCustomerItemViewModel(DataObject.CustomerKey); }
             set
             {
                 if (value != null)
                 {
-                    TypedDataObject.CustomerKey = value.TypedDataObject.Key;
+                    DataObject.CustomerKey = value.DataObject.Key;
                 }
                 OnPropertyChanged();
             }
@@ -82,12 +81,12 @@ namespace MVVMStarterDemoA.ViewModels.Domain.Sale
 
         public Employee.ItemViewModel SelectedEmployee
         {
-            get { return GetEmployeeItemViewModel(TypedDataObject.EmployeeKey); }
+            get { return GetEmployeeItemViewModel(DataObject.EmployeeKey); }
             set
             {
                 if (value != null)
                 {
-                    TypedDataObject.EmployeeKey = value.TypedDataObject.Key;
+                    DataObject.EmployeeKey = value.DataObject.Key;
                 }
                 OnPropertyChanged();
             }
@@ -97,7 +96,7 @@ namespace MVVMStarterDemoA.ViewModels.Domain.Sale
         {
             foreach (var carItemViewModel in _observableCollectionCars)
             {
-                if (carItemViewModel.TypedDataObject.Key == key)
+                if (carItemViewModel.DataObject.Key == key)
                 {
                     return carItemViewModel;
                 }
@@ -110,7 +109,7 @@ namespace MVVMStarterDemoA.ViewModels.Domain.Sale
         {
             foreach (var customerItemViewModel in _observableCollectionCustomers)
             {
-                if (customerItemViewModel.TypedDataObject.Key == key)
+                if (customerItemViewModel.DataObject.Key == key)
                 {
                     return customerItemViewModel;
                 }
@@ -123,7 +122,7 @@ namespace MVVMStarterDemoA.ViewModels.Domain.Sale
         {
             foreach (var employeeItemViewModel in _observableCollectionEmployees)
             {
-                if (employeeItemViewModel.TypedDataObject.Key == key)
+                if (employeeItemViewModel.DataObject.Key == key)
                 {
                     return employeeItemViewModel;
                 }
@@ -132,23 +131,23 @@ namespace MVVMStarterDemoA.ViewModels.Domain.Sale
             return null;
         }
 
-        public DetailsViewModel(ITransformedData obj) : base(obj)
+        public DetailsViewModel(SaleViewModel obj) : base(obj)
         {
             _observableCollectionCars = new ObservableCollection<Car.ItemViewModel>();
             _observableCollectionCustomers = new ObservableCollection<Customer.ItemViewModel>();
             _observableCollectionEmployees = new ObservableCollection<Employee.ItemViewModel>();
 
-            foreach (var carData in ObjectProvider.CarCatalog.AllTransformed)
+            foreach (var carData in ObjectProvider.CarCatalog.All)
             {
                 _observableCollectionCars.Add(new Car.ItemViewModel(carData));
             }
 
-            foreach (var customerData in ObjectProvider.CustomerCatalog.AllTransformed)
+            foreach (var customerData in ObjectProvider.CustomerCatalog.All)
             {
                 _observableCollectionCustomers.Add(new Customer.ItemViewModel(customerData));
             }
 
-            foreach (var employeeData in ObjectProvider.EmployeeCatalog.AllTransformed)
+            foreach (var employeeData in ObjectProvider.EmployeeCatalog.All)
             {
                 _observableCollectionEmployees.Add(new Employee.ItemViewModel(employeeData));
             }

@@ -1,5 +1,4 @@
-﻿using DataTransformation.Interfaces;
-using ExtensionsViewModel.Implementation;
+﻿using ExtensionsViewModel.Implementation;
 using MVVMStarterDemoA.DataTransformations.Domain.Customer;
 
 namespace MVVMStarterDemoA.ViewModels.Domain.Customer
@@ -8,15 +7,15 @@ namespace MVVMStarterDemoA.ViewModels.Domain.Customer
     {
         public override int ImageKey
         {
-            get { return TypedDataObject.ImageKey; }
+            get { return DataObject.ImageKey; }
         }
 
         public override string Description
         {
-            get { return TypedDataObject.FullName; }
+            get { return DataObject.FullName; }
         }
 
-        public ItemViewModel(ITransformedData obj) : base(obj)
+        public ItemViewModel(CustomerViewModel obj) : base(obj)
         {
         }
     }

@@ -1,9 +1,9 @@
-﻿using ExtensionsModel.Implementation;
-using MVVMStarterDemoA.DataTransformations.Domain.Car;
+﻿using MVVMStarterDemoA.DataTransformations.Domain.Car;
+using MVVMStarterDemoA.Models.Base;
 
 namespace MVVMStarterDemoA.Models.Domain.Car
 {
-    public class CarCatalog : FilePersistableCatalog<Car>
+    public class CarCatalog : FilePersistableCatalogNoDTO<Car, CarViewModel>
     {
         #region Model Singleton implementation
         private static CarCatalog _instance;

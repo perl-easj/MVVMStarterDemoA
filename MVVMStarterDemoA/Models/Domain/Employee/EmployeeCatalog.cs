@@ -1,9 +1,9 @@
-﻿using ExtensionsModel.Implementation;
-using MVVMStarterDemoA.DataTransformations.Domain.Employee;
+﻿using MVVMStarterDemoA.DataTransformations.Domain.Employee;
+using MVVMStarterDemoA.Models.Base;
 
 namespace MVVMStarterDemoA.Models.Domain.Employee
 {
-    public class EmployeeCatalog : FilePersistableCatalog<Employee>
+    public class EmployeeCatalog : FilePersistableCatalogNoDTO<Employee, EmployeeViewModel>
     {
         #region Model Singleton implementation
         private static EmployeeCatalog _instance;

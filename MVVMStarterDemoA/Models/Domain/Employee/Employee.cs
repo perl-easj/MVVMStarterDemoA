@@ -1,5 +1,6 @@
 ﻿using System;
 using MVVMStarterDemoA.Models.Base;
+// ReSharper disable UnusedMember.Local
 
 namespace MVVMStarterDemoA.Models.Domain.Employee
 {
@@ -26,6 +27,15 @@ namespace MVVMStarterDemoA.Models.Domain.Employee
         private int CarsSold
         {
             get { return _saleCatalog.CarsSoldByEmployee(Key); }
+        }
+
+        public override void SetValuesFromObject(Employee obj)
+        {
+            Key = obj.Key;
+            ImageKey = obj.ImageKey;
+            Title = obj.Title;
+            EmployedDate = obj.EmployedDate;
+            _saleCatalog = Sale.SaleCatalog.Instance;
         }
     }
 }

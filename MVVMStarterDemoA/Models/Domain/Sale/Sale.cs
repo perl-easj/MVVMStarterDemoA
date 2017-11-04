@@ -29,5 +29,15 @@ namespace MVVMStarterDemoA.Models.Domain.Sale
         public DateTimeOffset SalesDate { get; set; }
 
         public int FinalPrice { get; set; }
+
+        public override void SetValuesFromObject(Sale obj)
+        {
+            Key = obj.Key;
+            CarKey = obj.CarKey;
+            CustomerKey = obj.CustomerKey;
+            EmployeeKey = obj.EmployeeKey;
+            SalesDate = obj.SalesDate;
+            FinalPrice = obj.FinalPrice;
+        }
     }
 }

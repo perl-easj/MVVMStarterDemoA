@@ -1,4 +1,5 @@
-﻿using DataTransformation.Interfaces;
+﻿using System;
+using DataTransformation.Interfaces;
 using InMemoryStorage.Implementation;
 
 namespace MVVMStarterDemoA.Models.Base
@@ -10,13 +11,11 @@ namespace MVVMStarterDemoA.Models.Base
             Key = key;
         }
 
-        public virtual void SetValuesFromObject(T obj)
-        {
-        }
-
         public ITransformed<T> Clone()
         {
             return (MemberwiseClone() as ITransformed<T>);
         }
+
+        public abstract void SetValuesFromObject(T obj);
     }
 }

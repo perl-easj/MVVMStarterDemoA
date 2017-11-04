@@ -30,5 +30,17 @@ namespace MVVMStarterDemoA.Models.Domain.Customer
         public int MaxPrice { get; set; }
 
         public bool NewsLetter { get; set; }
+
+        public override void SetValuesFromObject(Customer obj)
+        {
+            Key = obj.Key;
+            ImageKey = obj.ImageKey;
+            Address = obj.Address;
+            ZipCode = obj.ZipCode;
+            City = obj.City;
+            MinPrice = obj.MinPrice;
+            MaxPrice = obj.MaxPrice;
+            NewsLetter = obj.NewsLetter;
+        }
     }
 }

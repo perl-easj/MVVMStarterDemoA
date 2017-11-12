@@ -1,5 +1,5 @@
-﻿using MVVMStarterDemoA.DataTransformations.Domain.Employee;
-using MVVMStarterDemoA.Models.Base;
+﻿using ExtensionsModel.Implementation;
+using MVVMStarterDemoA.DataTransformations.Domain.Employee;
 
 namespace MVVMStarterDemoA.Models.Domain.Employee
 {

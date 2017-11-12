@@ -1,5 +1,5 @@
-﻿using MVVMStarterDemoA.DataTransformations.Domain.Car;
-using MVVMStarterDemoA.Models.Base;
+﻿using ExtensionsModel.Implementation;
+using MVVMStarterDemoA.DataTransformations.Domain.Car;
 
 namespace MVVMStarterDemoA.Models.Domain.Car
 {

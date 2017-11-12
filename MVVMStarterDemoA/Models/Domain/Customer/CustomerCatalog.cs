@@ -1,5 +1,5 @@
-﻿using MVVMStarterDemoA.DataTransformations.Domain.Customer;
-using MVVMStarterDemoA.Models.Base;
+﻿using ExtensionsModel.Implementation;
+using MVVMStarterDemoA.DataTransformations.Domain.Customer;
 
 namespace MVVMStarterDemoA.Models.Domain.Customer
 {

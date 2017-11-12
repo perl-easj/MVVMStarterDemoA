@@ -1,5 +1,4 @@
-﻿using System;
-using DataTransformation.Interfaces;
+﻿using DataTransformation.Interfaces;
 using InMemoryStorage.Implementation;
 
 namespace MVVMStarterDemoA.Models.Base

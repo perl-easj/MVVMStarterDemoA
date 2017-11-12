@@ -1,5 +1,5 @@
-﻿using MVVMStarterDemoA.DataTransformations.Domain.Sale;
-using MVVMStarterDemoA.Models.Base;
+﻿using ExtensionsModel.Implementation;
+using MVVMStarterDemoA.DataTransformations.Domain.Sale;
 
 namespace MVVMStarterDemoA.Models.Domain.Sale
 {

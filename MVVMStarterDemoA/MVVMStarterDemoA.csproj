@@ -99,15 +99,10 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Configuration\App\AppConfig.cs" />
-    <Compile Include="DataTransformations\Domain\Car\CarViewModel.cs" />
-    <Compile Include="DataTransformations\Domain\Car\CarViewModelFactory.cs" />
-    <Compile Include="DataTransformations\Domain\Customer\CustomerViewModel.cs" />
-    <Compile Include="DataTransformations\Domain\Customer\CustomerViewModelFactory.cs" />
-    <Compile Include="DataTransformations\Domain\Employee\EmployeeViewModel.cs" />
-    <Compile Include="DataTransformations\Domain\Employee\EmployeeViewModelFactory.cs" />
-    <Compile Include="DataTransformations\Domain\Sale\SaleViewModel.cs" />
-    <Compile Include="DataTransformations\Domain\Sale\SaleViewModelFactory.cs" />
-    <Compile Include="Models\Base\DomainBase.cs" />
+    <Compile Include="DataTransformations\Domain\Car\CarVMO.cs" />
+    <Compile Include="DataTransformations\Domain\Customer\CustomerVMO.cs" />
+    <Compile Include="DataTransformations\Domain\Employee\EmployeeVMO.cs" />
+    <Compile Include="DataTransformations\Domain\Sale\SaleVMO.cs" />
     <Compile Include="Models\Base\DomainBaseWithImage.cs" />
     <Compile Include="Views\App\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>

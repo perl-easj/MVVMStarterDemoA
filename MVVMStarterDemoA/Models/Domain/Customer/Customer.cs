@@ -2,7 +2,7 @@
 
 namespace MVVMStarterDemoA.Models.Domain.Customer
 {
-    public class Customer : DomainBaseWithImage<Customer>
+    public class Customer : DomainBaseWithImage
     {
         public Customer(int key, int imageKey, string fullName, string phone, string email, string address, int zipCode, string city, int minPrice, int maxPrice, bool newsLetter)
             : base(key, imageKey)
@@ -31,17 +31,5 @@ namespace MVVMStarterDemoA.Models.Domain.Customer
         public int MinPrice { get; set; }
         public int MaxPrice { get; set; }
         public bool NewsLetter { get; set; }
-
-        public override void SetValuesFromObject(Customer obj)
-        {
-            Key = obj.Key;
-            ImageKey = obj.ImageKey;
-            Address = obj.Address;
-            ZipCode = obj.ZipCode;
-            City = obj.City;
-            MinPrice = obj.MinPrice;
-            MaxPrice = obj.MaxPrice;
-            NewsLetter = obj.NewsLetter;
-        }
     }
 }

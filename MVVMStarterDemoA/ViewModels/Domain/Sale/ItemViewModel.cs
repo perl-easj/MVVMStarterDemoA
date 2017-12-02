@@ -8,7 +8,7 @@ using MVVMStarterDemoA.Models.App;
 
 namespace MVVMStarterDemoA.ViewModels.Domain.Sale
 {
-    public class ItemViewModel : ItemViewModelWithImage<SaleViewModel>
+    public class ItemViewModel : ItemViewModelWithImage<SaleVMO>
     {
         public string DescriptionCar
         {
@@ -40,22 +40,22 @@ namespace MVVMStarterDemoA.ViewModels.Domain.Sale
             get { return GetCar() != null ? GetCar().ImageKey : StorableBase.NullKey; }
         }
 
-        private CarViewModel GetCar()
+        private CarVMO GetCar()
         {
-            return ObjectProvider.CarCatalog.Read(DataObject.CarKey) as CarViewModel;
+            return ObjectProvider.CarCatalog.Read(DataObject.CarKey) as CarVMO;
         }
 
-        private CustomerViewModel GetCustomer()
+        private CustomerVMO GetCustomer()
         {
-            return ObjectProvider.CustomerCatalog.Read(DataObject.CustomerKey) as CustomerViewModel;
+            return ObjectProvider.CustomerCatalog.Read(DataObject.CustomerKey) as CustomerVMO;
         }
 
-        private EmployeeViewModel GetEmployee()
+        private EmployeeVMO GetEmployee()
         {
-            return ObjectProvider.EmployeeCatalog.Read(DataObject.EmployeeKey) as EmployeeViewModel;
+            return ObjectProvider.EmployeeCatalog.Read(DataObject.EmployeeKey) as EmployeeVMO;
         }
 
-        public ItemViewModel(SaleViewModel obj) : base(obj)
+        public ItemViewModel(SaleVMO obj) : base(obj)
         {
         }
     }

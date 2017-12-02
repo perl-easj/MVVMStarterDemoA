@@ -3,7 +3,7 @@ using MVVMStarterDemoA.DataTransformations.Domain.Car;
 
 namespace MVVMStarterDemoA.ViewModels.Domain.Car
 {
-    public class ItemViewModel : ItemViewModelWithImage<CarViewModel>
+    public class ItemViewModel : ItemViewModelWithImage<CarVMO>
     {
         public override int ImageKey
         {
@@ -15,7 +15,7 @@ namespace MVVMStarterDemoA.ViewModels.Domain.Car
             get { return DataObject.LicensePlate; }
         }
 
-        public ItemViewModel(CarViewModel obj) : base(obj)
+        public ItemViewModel(CarVMO obj) : base(obj)
         {
         }
     }

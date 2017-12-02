@@ -2,7 +2,7 @@
 
 namespace MVVMStarterDemoA.Models.Domain.Car
 {
-    public class Car : DomainBaseWithImage<Car>
+    public class Car : DomainBaseWithImage
     {
         public Car(int key, int imageKey, string licensePlate, string brand, string model, int year, int engineSizeCm3,
             int horsePower, int seats, int price)
@@ -37,20 +37,5 @@ namespace MVVMStarterDemoA.Models.Domain.Car
         public int Seats { get; set; }
 
         public int Price { get; set; }
-
-
-        public override void SetValuesFromObject(Car obj)
-        {
-            Key = obj.Key;
-            ImageKey = obj.ImageKey;
-            LicensePlate = obj.LicensePlate;
-            Brand = obj.Brand;
-            Model = obj.Model;
-            Year = obj.Year;
-            EngineSizeCm3 = obj.EngineSizeCm3;
-            HorsePower = obj.HorsePower;
-            Seats = obj.Seats;
-            Price = obj.Price;
-        }
     }
 }

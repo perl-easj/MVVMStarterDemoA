@@ -1,6 +1,8 @@
-﻿namespace MVVMStarterDemoA.Models.Base
+﻿using DataTransformation.Implementation;
+
+namespace MVVMStarterDemoA.Models.Base
 {
-    public abstract class DomainBaseWithImage<T> : DomainBase<T>
+    public abstract class DomainBaseWithImage : CopyableBase
     {
         public int ImageKey { get; set; }
 

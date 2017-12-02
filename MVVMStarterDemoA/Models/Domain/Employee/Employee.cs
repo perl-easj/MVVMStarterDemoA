@@ -4,7 +4,7 @@ using MVVMStarterDemoA.Models.Base;
 
 namespace MVVMStarterDemoA.Models.Domain.Employee
 {
-    public class Employee : DomainBaseWithImage<Employee>
+    public class Employee : DomainBaseWithImage
     {
         private static Sale.SaleCatalog _saleCatalog;
 
@@ -32,15 +32,6 @@ namespace MVVMStarterDemoA.Models.Domain.Employee
         private int CarsSold
         {
             get { return _saleCatalog.CarsSoldByEmployee(Key); }
-        }
-
-        public override void SetValuesFromObject(Employee obj)
-        {
-            Key = obj.Key;
-            ImageKey = obj.ImageKey;
-            Title = obj.Title;
-            EmployedDate = obj.EmployedDate;
-            _saleCatalog = Sale.SaleCatalog.Instance;
         }
     }
 }

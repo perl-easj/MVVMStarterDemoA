@@ -300,88 +300,96 @@
       <Version>10.0.3</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Reference Include="CatalogImplementation">
-      <HintPath>..\..\MVVMStarterLibrary\CatalogImplementation\bin\Debug\CatalogImplementation.dll</HintPath>
+      <HintPath>..\..\MVVMStarterLibrary\MVVMStarterLibraryDLLs\CatalogImplementation.dll</HintPath>
     </Reference>
-    <Reference Include="CatalogInterfaces, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\MVVMStarterLibrary\CatalogInterfaces\bin\Debug\CatalogInterfaces.dll</HintPath>
+    <Reference Include="CatalogInterfaces">
+      <HintPath>..\..\MVVMStarterLibrary\MVVMStarterLibraryDLLs\CatalogInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="CommandImplementation">
-      <HintPath>..\..\MVVMStarterLibrary\ExtensionsServices\bin\Debug\CommandImplementation.dll</HintPath>
+      <HintPath>..\..\MVVMStarterLibrary\MVVMStarterLibraryDLLs\CommandImplementation.dll</HintPath>
     </Reference>
     <Reference Include="CommandInterfaces">
-      <HintPath>..\..\MVVMStarterLibrary\CommandInterfaces\bin\Debug\CommandInterfaces.dll</HintPath>
+      <HintPath>..\..\MVVMStarterLibrary\MVVMStarterLibraryDLLs\CommandInterfaces.dll</HintPath>
     </Reference>
-    <Reference Include="ControllerInterfaces, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\MVVMStarterLibrary\ControllerInterfaces\bin\Debug\ControllerInterfaces.dll</HintPath>
+    <Reference Include="ControllerInterfaces">
+      <HintPath>..\..\MVVMStarterLibrary\MVVMStarterLibraryDLLs\ControllerInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="ControlState">
-      <HintPath>..\..\MVVMStarterLibrary\ControlState\bin\Debug\ControlState.dll</HintPath>
+      <HintPath>..\..\MVVMStarterLibrary\MVVMStarterLibraryDLLs\ControlState.dll</HintPath>
     </Reference>
     <Reference Include="DataCommandImplementation">
-      <HintPath>..\..\MVVMStarterLibrary\DataCommandImplementation\bin\Debug\DataCommandImplementation.dll</HintPath>
+      <HintPath>..\..\MVVMStarterLibrary\MVVMStarterLibraryDLLs\DataCommandImplementation.dll</HintPath>
     </Reference>
-    <Reference Include="DataControllerImplementation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\MVVMStarterLibrary\DataControllerImplementation\bin\Debug\DataControllerImplementation.dll</HintPath>
+    <Reference Include="DataControllerImplementation">
+      <HintPath>..\..\MVVMStarterLibrary\MVVMStarterLibraryDLLs\DataControllerImplementation.dll</HintPath>
     </Reference>
     <Reference Include="DataTransformationImplementation">
-      <HintPath>..\..\MVVMStarterLibrary\DataTransformationImplementation\bin\Debug\DataTransformationImplementation.dll</HintPath>
+      <HintPath>..\..\MVVMStarterLibrary\MVVMStarterLibraryDLLs\DataTransformationImplementation.dll</HintPath>
     </Reference>
     <Reference Include="DataTransformationInterfaces">
-      <HintPath>..\..\MVVMStarterLibrary\DataTransformationInterfaces\bin\Debug\DataTransformationInterfaces.dll</HintPath>
+      <HintPath>..\..\MVVMStarterLibrary\MVVMStarterLibraryDLLs\DataTransformationInterfaces.dll</HintPath>
     </Reference>
-    <Reference Include="ExtensionsCommands, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\MVVMStarterLibrary\ExtensionsCommands\bin\Debug\ExtensionsCommands.dll</HintPath>
+    <Reference Include="ExtensionsCommands">
+      <HintPath>..\..\MVVMStarterLibrary\MVVMStarterLibraryDLLs\ExtensionsCommands.dll</HintPath>
     </Reference>
     <Reference Include="ExtensionsModel">
-      <HintPath>..\..\MVVMStarterLibrary\ExtensionsModel\bin\Debug\ExtensionsModel.dll</HintPath>
+      <HintPath>..\..\MVVMStarterLibrary\MVVMStarterLibraryDLLs\ExtensionsModel.dll</HintPath>
     </Reference>
     <Reference Include="ExtensionsServices">
-      <HintPath>..\..\MVVMStarterLibrary\ExtensionsServices\bin\Debug\ExtensionsServices.dll</HintPath>
+      <HintPath>..\..\MVVMStarterLibrary\MVVMStarterLibraryDLLs\ExtensionsServices.dll</HintPath>
     </Reference>
     <Reference Include="ExtensionsViewModel">
-      <HintPath>..\..\MVVMStarterLibrary\ExtensionsViewModel\bin\Debug\ExtensionsViewModel.dll</HintPath>
+      <HintPath>..\..\MVVMStarterLibrary\MVVMStarterLibraryDLLs\ExtensionsViewModel.dll</HintPath>
     </Reference>
     <Reference Include="FilePersistency">
-      <HintPath>..\..\MVVMStarterLibrary\FilePersistency\bin\Debug\FilePersistency.dll</HintPath>
+      <HintPath>..\..\MVVMStarterLibrary\MVVMStarterLibraryDLLs\FilePersistency.dll</HintPath>
+    </Reference>
+    <Reference Include="Filtering">
+      <HintPath>..\..\MVVMStarterLibrary\MVVMStarterLibraryDLLs\Filtering.dll</HintPath>
     </Reference>
     <Reference Include="Images">
-      <HintPath>..\..\MVVMStarterLibrary\Images\bin\Debug\Images.dll</HintPath>
+      <HintPath>..\..\MVVMStarterLibrary\MVVMStarterLibraryDLLs\Images.dll</HintPath>
     </Reference>
     <Reference Include="InMemoryStorageImplementation">
-      <HintPath>..\..\MVVMStarterLibrary\ExtensionsModel\bin\Debug\InMemoryStorageImplementation.dll</HintPath>
+      <HintPath>..\..\MVVMStarterLibrary\MVVMStarterLibraryDLLs\InMemoryStorageImplementation.dll</HintPath>
     </Reference>
     <Reference Include="InMemoryStorageInterfaces">
-      <HintPath>..\..\MVVMStarterLibrary\InMemoryStorage\bin\Debug\InMemoryStorageInterfaces.dll</HintPath>
+      <HintPath>..\..\MVVMStarterLibrary\MVVMStarterLibraryDLLs\InMemoryStorageInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="PersistencyImplementation">
-      <HintPath>..\..\MVVMStarterLibrary\ExtensionsModel\bin\Debug\PersistencyImplementation.dll</HintPath>
+      <HintPath>..\..\MVVMStarterLibrary\MVVMStarterLibraryDLLs\PersistencyImplementation.dll</HintPath>
     </Reference>
-    <Reference Include="PersistencyInterfaces, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\MVVMStarterLibrary\PersistencyInterfaces\bin\Debug\PersistencyInterfaces.dll</HintPath>
+    <Reference Include="PersistencyInterfaces">
+      <HintPath>..\..\MVVMStarterLibrary\MVVMStarterLibraryDLLs\PersistencyInterfaces.dll</HintPath>
     </Reference>
-    <Reference Include="StringPersistencyInterfaces, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\MVVMStarterLibrary\StringPersistencyInterfaces\bin\Debug\StringPersistencyInterfaces.dll</HintPath>
+    <Reference Include="PropertyDependency">
+      <HintPath>..\..\MVVMStarterLibrary\MVVMStarterLibraryDLLs\PropertyDependency.dll</HintPath>
+    </Reference>
+    <Reference Include="Security">
+      <HintPath>..\..\MVVMStarterLibrary\MVVMStarterLibraryDLLs\Security.dll</HintPath>
+    </Reference>
+    <Reference Include="StringPersistencyInterfaces">
+      <HintPath>..\..\MVVMStarterLibrary\MVVMStarterLibraryDLLs\StringPersistencyInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="UI">
-      <HintPath>..\..\MVVMStarterLibrary\UI\bin\Debug\UI.dll</HintPath>
+      <HintPath>..\..\MVVMStarterLibrary\MVVMStarterLibraryDLLs\UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Validation">
+      <HintPath>..\..\MVVMStarterLibrary\MVVMStarterLibraryDLLs\Validation.dll</HintPath>
     </Reference>
     <Reference Include="ViewModelImplementation">
-      <HintPath>..\..\MVVMStarterLibrary\ViewModelImplementation\bin\Debug\ViewModelImplementation.dll</HintPath>
+      <HintPath>..\..\MVVMStarterLibrary\MVVMStarterLibraryDLLs\ViewModelImplementation.dll</HintPath>
     </Reference>
     <Reference Include="ViewModelInterfaces">
-      <HintPath>..\..\MVVMStarterLibrary\ViewModelInterfaces\bin\Debug\ViewModelInterfaces.dll</HintPath>
+      <HintPath>..\..\MVVMStarterLibrary\MVVMStarterLibraryDLLs\ViewModelInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="ViewState">
-      <HintPath>..\..\MVVMStarterLibrary\ViewState\bin\Debug\ViewState.dll</HintPath>
+      <HintPath>..\..\MVVMStarterLibrary\MVVMStarterLibraryDLLs\ViewState.dll</HintPath>
+    </Reference>
+    <Reference Include="WebAPI">
+      <HintPath>..\..\MVVMStarterLibrary\MVVMStarterLibraryDLLs\WebAPI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

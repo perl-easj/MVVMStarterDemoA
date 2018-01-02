@@ -12,7 +12,7 @@ namespace MVVMStarterDemoA.ViewModels.Data
 
         public string Name
         {
-            get { return DataObject.FullName; }
+            get { return DataObject.FullName.TrimEnd(' '); }
             set
             {
                 DataObject.FullName = value;
@@ -22,7 +22,7 @@ namespace MVVMStarterDemoA.ViewModels.Data
 
         public string Address
         {
-            get { return DataObject.Address; }
+            get { return DataObject.Address.TrimEnd(' '); }
             set
             {
                 DataObject.Address = value;
@@ -42,7 +42,7 @@ namespace MVVMStarterDemoA.ViewModels.Data
 
         public string City
         {
-            get { return DataObject.City; }
+            get { return DataObject.City.TrimEnd(' '); }
             set
             {
                 DataObject.City = value;
@@ -52,7 +52,7 @@ namespace MVVMStarterDemoA.ViewModels.Data
 
         public string Phone
         {
-            get { return DataObject.Phone; }
+            get { return DataObject.Phone.TrimEnd(' '); }
             set
             {
                 DataObject.Phone = value;
@@ -62,7 +62,7 @@ namespace MVVMStarterDemoA.ViewModels.Data
 
         public string Email
         {
-            get { return DataObject.Email; }
+            get { return DataObject.Email.TrimEnd(' '); }
             set
             {
                 DataObject.Email = value;

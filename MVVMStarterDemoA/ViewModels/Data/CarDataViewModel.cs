@@ -11,7 +11,7 @@ namespace MVVMStarterDemoA.ViewModels.Data
 
         public string Plate
         {
-            get { return DataObject.LicensePlate; }
+            get { return DataObject.LicensePlate.TrimEnd(' '); }
             set
             {
                 DataObject.LicensePlate = value;
@@ -21,7 +21,7 @@ namespace MVVMStarterDemoA.ViewModels.Data
 
         public string Brand
         {
-            get { return DataObject.Brand; }
+            get { return DataObject.Brand.TrimEnd(' '); }
             set
             {
                 DataObject.Brand = value;
@@ -31,7 +31,7 @@ namespace MVVMStarterDemoA.ViewModels.Data
 
         public string Model
         {
-            get { return DataObject.Model; }
+            get { return DataObject.Model.TrimEnd(' '); }
             set
             {
                 DataObject.Model = value;
@@ -106,7 +106,7 @@ namespace MVVMStarterDemoA.ViewModels.Data
 
         public override string ContentText
         {
-            get { return DataObject.Brand + " " + DataObject.Model; }
+            get { return Brand + " " + Model; }
         }
     }
 }

@@ -26,8 +26,12 @@
             <AppBarButton Icon="Save" Label="Save" Command="{Binding NavigationCommands[Save]}"/>
         </CommandBar>
     </Page.BottomAppBar>
-    
-    <Grid Background="{ThemeResource SystemControlAcrylicWindowBrush}">
 
+    <Grid Background="{ThemeResource SystemControlAcrylicWindowBrush}">
+        <ProgressRing Width="300" Height="300"
+                      HorizontalAlignment="Center" VerticalAlignment="Center"
+                      IsActive="{Binding IsWorking}" />
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
+                   FontSize="24" Text="{Binding LoadingText}" />
     </Grid>
 </Page>

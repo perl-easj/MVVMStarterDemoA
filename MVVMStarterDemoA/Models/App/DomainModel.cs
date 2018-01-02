@@ -1,4 +1,6 @@
-﻿using MVVMStarterDemoA.Models.Catalog;
+﻿using System;
+using System.Threading.Tasks;
+using MVVMStarterDemoA.Models.Catalog;
 
 namespace MVVMStarterDemoA.Models.App
 {
@@ -8,7 +10,14 @@ namespace MVVMStarterDemoA.Models.App
         private CarCatalog _carCatalog;
         private CustomerCatalog _customerCatalog;
         private EmployeeCatalog _employeeCatalog;
-        private SaleCatalog _saleCatalog; 
+        private SaleCatalog _saleCatalog;
+        #endregion
+
+        #region Events
+        public event Action LoadBegins;
+        public event Action LoadEnds;
+        public event Action SaveBegins;
+        public event Action SaveEnds;
         #endregion
 
         #region Singleton implementation
@@ -42,21 +51,31 @@ namespace MVVMStarterDemoA.Models.App
         public SaleCatalog Sales { get { return _saleCatalog; } }
         #endregion
 
-        public void Load()
+        #region Persistency methods
+        public async Task LoadAsync()
         {
-            _carCatalog.Load();
-            _customerCatalog.Load();
-            _employeeCatalog.Load();
-            _saleCatalog.Load();
+            LoadBegins?.Invoke();
+
+            await _carCatalog.LoadAsync();
+            await _customerCatalog.LoadAsync();
+            await _employeeCatalog.LoadAsync();
+            await _saleCatalog.LoadAsync();
+
+            LoadEnds?.Invoke();
         }
 
-        public void Save()
+        public async Task SaveAsync()
         {
-            _carCatalog.Save();
-            _customerCatalog.Save();
-            _employeeCatalog.Save();
-            _saleCatalog.Save();
-        }
+            SaveBegins?.Invoke();
+
+            await _carCatalog.SaveAsync();
+            await _customerCatalog.SaveAsync();
+            await _employeeCatalog.SaveAsync();
+            await _saleCatalog.SaveAsync();
+
+            SaveEnds?.Invoke();
+        } 
+        #endregion
 
         #region Business logic methods
         public int CarsSoldByEmployee(int employeeKey)
